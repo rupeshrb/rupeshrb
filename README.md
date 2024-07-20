@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Rupesh</h1>
-<h3 align="center">👨‍💻 Full Stack Developer | Passionate about creating innovative solutions 🌍 Exploring the intersection of technology and creativity 💡 Constantly learn</h3>
+<h3 align="center">👨‍💻 Backend Developer | Passionate about creating innovative solutions 🌍 Exploring the intersection of technology and creativity 💡 Constantly learn</h3>
 
 - 📄 Know about my experiences [https://drive.google.com/file/d/11IHDZo_3_cxydxmvDB-TsBflfHAVwDyq/view?usp=sharing](https://drive.google.com/file/d/11IHDZo_3_cxydxmvDB-TsBflfHAVwDyq/view?usp=sharing)
 
