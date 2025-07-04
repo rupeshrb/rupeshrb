@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Rupesh</h1>
 <h3 align="center">👨‍💻 Backend Developer | Passionate about creating innovative solutions 🌍 Exploring the intersection of technology and creativity 💡 Constantly learn</h3>
 
-- 📄 Know about my experiences [https://drive.google.com/file/d/11IHDZo_3_cxydxmvDB-TsBflfHAVwDyq/view?usp=sharing](https://drive.google.com/file/d/1Q9PNbRi8jamOqyk8UeFkNyqPPbBch1Y2/view)
+- 📄 Know about my experiences [Resume](https://drive.google.com/file/d/1a1Wr8YGIjgAMV4M_G8WzE7LWdv9p32QF/view?usp=sharing)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
