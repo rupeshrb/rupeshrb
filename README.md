@@ -1,106 +1,39 @@
-<style>
-@keyframes neon-glow {
-  0%, 100% {
-    box-shadow: 0 0 10px #2E9EF7, 0 0 20px #2E9EF7, inset 0 0 10px rgba(46, 158, 247, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 20px #2E9EF7, 0 0 40px #2E9EF7, 0 0 60px #2E9EF7, inset 0 0 20px rgba(46, 158, 247, 0.8);
-  }
-}
-
-@keyframes border-travel {
-  0% {
-    background: linear-gradient(90deg, transparent, transparent, #2E9EF7, transparent, transparent);
-    background-position: 0% center;
-  }
-  50% {
-    background: linear-gradient(90deg, transparent, #2E9EF7, #00FFFF, #2E9EF7, transparent);
-    background-position: 100% center;
-  }
-  100% {
-    background: linear-gradient(90deg, transparent, transparent, #2E9EF7, transparent, transparent);
-    background-position: 200% center;
-  }
-}
-
-@keyframes border-travel-vertical {
-  0% {
-    background: linear-gradient(180deg, transparent, transparent, #2E9EF7, transparent, transparent);
-    background-position: center 0%;
-  }
-  50% {
-    background: linear-gradient(180deg, transparent, #2E9EF7, #00FFFF, #2E9EF7, transparent);
-    background-position: center 100%;
-  }
-  100% {
-    background: linear-gradient(180deg, transparent, transparent, #2E9EF7, transparent, transparent);
-    background-position: center 200%;
-  }
-}
-
-.neon-border {
-  position: relative;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-  animation: neon-glow 2s ease-in-out infinite;
-}
-
-.neon-border::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #2E9EF7, #00FFFF, #2E9EF7, transparent);
-  background-size: 200% 100%;
-  animation: border-travel 3s ease-in-out infinite;
-}
-
-.neon-border::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #2E9EF7, #00FFFF, #2E9EF7, transparent);
-  background-size: 200% 100%;
-  animation: border-travel 3s ease-in-out infinite reverse;
-}
-
-.neon-side-left {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: 2px;
-  bottom: -2px;
-  background: linear-gradient(180deg, transparent, #2E9EF7, #00FFFF, #2E9EF7, transparent);
-  background-size: 100% 200%;
-  animation: border-travel-vertical 3s ease-in-out infinite;
-}
-
-.neon-side-right {
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 2px;
-  bottom: -2px;
-  background: linear-gradient(360deg, transparent, #2E9EF7, #00FFFF, #2E9EF7, transparent);
-  background-size: 100% 200%;
-  animation: border-travel-vertical 3s ease-in-out infinite reverse;
-}
-</style>
+<svg width="100%" height="120" style="margin-bottom: 20px;">
+  <defs>
+    <style>
+      @keyframes neonGlow {
+        0%, 100% { stroke: #2E9EF7; filter: drop-shadow(0 0 5px #2E9EF7); }
+        50% { stroke: #00FFFF; filter: drop-shadow(0 0 15px #00FFFF) drop-shadow(0 0 25px #2E9EF7); }
+      }
+      @keyframes lightTravel {
+        0% { stroke-dashoffset: 1000; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .neon-rect {
+        stroke-width: 3;
+        fill: none;
+        animation: neonGlow 2s ease-in-out infinite;
+      }
+      .light-line {
+        stroke: #00FFFF;
+        stroke-width: 2;
+        stroke-dasharray: 50, 50;
+        filter: drop-shadow(0 0 10px #00FFFF) drop-shadow(0 0 5px #2E9EF7);
+        animation: lightTravel 4s linear infinite;
+      }
+    </style>
+  </defs>
+  <rect class="neon-rect" x="10" y="10" width="calc(100% - 20)" height="100" rx="10"/>
+  <line class="light-line" x1="10" y1="15" x2="100%" y2="15"/>
+  <line class="light-line" x1="10" y1="105" x2="100%" y2="105"/>
+</svg>
 
 <div align="center">
 
-<div class="neon-border" style="padding: 20px; border-radius: 10px;">
-  <div class="neon-side-left"></div>
-  <div class="neon-side-right"></div>
-  
-  <a href="#">
-    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=2E9EF7&center=true&vCenter=true&multiline=true&width=750&height=110&lines=Backend+Engineer+%7C+Full+Stack+Developer&lines=Java+%7C+Spring+Boot+%7C+Python+%7C+React+%7C+Angular+%7C+Cloud" alt="Backend Engineer" />
-  </a>
+<a href="#">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=2E9EF7&center=true&vCenter=true&multiline=true&width=750&height=110&lines=Backend+Engineer+%7C+Full+Stack+Developer&lines=Java+%7C+Spring+Boot+%7C+Python+%7C+React+%7C+Angular" alt="Backend Engineer" />
+</a>
+
 </div>
 
 <br/>
@@ -118,15 +51,41 @@
 
 <br/>
 
-<div align="center" class="neon-border" style="padding: 20px; border-radius: 10px; margin: 20px auto; max-width: 800px;">
-  <div class="neon-side-left"></div>
-  <div class="neon-side-right"></div>
-  
-  I build secure, scalable backend systems — REST & gRPC services, event-driven pipelines with **Kafka** and **Redis**, and full-stack apps with **Angular** and **React**. At **Eaton Corporation**, I architect robust solutions that power critical infrastructure globally.
-
-</div>
-
-<br/>
+<svg width="100%" height="160" style="margin: 20px 0;">
+  <defs>
+    <style>
+      @keyframes neonGlow {
+        0%, 100% { stroke: #2E9EF7; filter: drop-shadow(0 0 5px #2E9EF7); }
+        50% { stroke: #00FFFF; filter: drop-shadow(0 0 15px #00FFFF) drop-shadow(0 0 25px #2E9EF7); }
+      }
+      @keyframes lightTravel {
+        0% { stroke-dashoffset: 1000; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .neon-rect-bio {
+        stroke-width: 3;
+        fill: none;
+        animation: neonGlow 2s ease-in-out infinite;
+      }
+      .light-line-bio {
+        stroke: #00FFFF;
+        stroke-width: 2;
+        stroke-dasharray: 50, 50;
+        filter: drop-shadow(0 0 10px #00FFFF) drop-shadow(0 0 5px #2E9EF7);
+        animation: lightTravel 4s linear infinite;
+      }
+    </style>
+  </defs>
+  <rect class="neon-rect-bio" x="10" y="10" width="calc(100% - 20)" height="140" rx="10"/>
+  <line class="light-line-bio" x1="10" y1="15" x2="100%" y2="15"/>
+  <line class="light-line-bio" x1="10" y1="145" x2="100%" y2="145"/>
+  <text x="50%" y="80" text-anchor="middle" fill="#2E9EF7" font-family="Arial" font-size="14" dy="0.3em">
+    I build secure, scalable backend systems — REST & gRPC services,
+  </text>
+  <text x="50%" y="100" text-anchor="middle" fill="#2E9EF7" font-family="Arial" font-size="14" dy="0.3em">
+    event-driven pipelines with Kafka & Redis, full-stack apps with Angular & React
+  </text>
+</svg>
 
 <div align="center">
 
@@ -136,16 +95,70 @@
 
 <br/>
 
-<div align="center" class="neon-border" style="padding: 20px; border-radius: 10px;">
-  <div class="neon-side-left"></div>
-  <div class="neon-side-right"></div>
+<svg width="100%" height="50" style="margin: 20px 0;">
+  <defs>
+    <style>
+      @keyframes neonGlow {
+        0%, 100% { stroke: #2E9EF7; filter: drop-shadow(0 0 5px #2E9EF7); }
+        50% { stroke: #00FFFF; filter: drop-shadow(0 0 15px #00FFFF) drop-shadow(0 0 25px #2E9EF7); }
+      }
+      @keyframes lightTravel {
+        0% { stroke-dashoffset: 1000; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .neon-rect-stats {
+        stroke-width: 3;
+        fill: none;
+        animation: neonGlow 2s ease-in-out infinite;
+      }
+      .light-line-stats {
+        stroke: #00FFFF;
+        stroke-width: 2;
+        stroke-dasharray: 50, 50;
+        filter: drop-shadow(0 0 10px #00FFFF) drop-shadow(0 0 5px #2E9EF7);
+        animation: lightTravel 4s linear infinite;
+      }
+    </style>
+  </defs>
+  <rect class="neon-rect-stats" x="10" y="5" width="calc(100% - 20)" height="40" rx="10"/>
+  <line class="light-line-stats" x1="10" y1="10" x2="100%" y2="10"/>
+  <line class="light-line-stats" x1="10" y1="40" x2="100%" y2="40"/>
+</svg>
 
-  <img src="https://streak-stats.demolab.com?user=rupeshrb&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+<img src="https://streak-stats.demolab.com?user=rupeshrb&theme=tokyonight&hide_border=true" />
 
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake.svg" />
-    <img alt="contribution snake animation" src="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake.svg" width="100%"/>
-  </picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake.svg" />
+  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake.svg" width="100%"/>
+</picture>
 
-</div>
+<svg width="100%" height="50" style="margin: 20px 0;">
+  <defs>
+    <style>
+      @keyframes neonGlow {
+        0%, 100% { stroke: #2E9EF7; filter: drop-shadow(0 0 5px #2E9EF7); }
+        50% { stroke: #00FFFF; filter: drop-shadow(0 0 15px #00FFFF) drop-shadow(0 0 25px #2E9EF7); }
+      }
+      @keyframes lightTravel {
+        0% { stroke-dashoffset: 1000; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .neon-rect-end {
+        stroke-width: 3;
+        fill: none;
+        animation: neonGlow 2s ease-in-out infinite;
+      }
+      .light-line-end {
+        stroke: #00FFFF;
+        stroke-width: 2;
+        stroke-dasharray: 50, 50;
+        filter: drop-shadow(0 0 10px #00FFFF) drop-shadow(0 0 5px #2E9EF7);
+        animation: lightTravel 4s linear infinite;
+      }
+    </style>
+  </defs>
+  <rect class="neon-rect-end" x="10" y="5" width="calc(100% - 20)" height="40" rx="10"/>
+  <line class="light-line-end" x1="10" y1="10" x2="100%" y2="10"/>
+  <line class="light-line-end" x1="10" y1="40" x2="100%" y2="40"/>
+</svg>
