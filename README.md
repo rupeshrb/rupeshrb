@@ -4,7 +4,6 @@
   <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=2E9EF7&center=true&vCenter=true&multiline=true&width=750&height=110&lines=Backend+Engineer+%40+Eaton+Corporation;Java+%C2%B7+Spring+Boot+%C2%B7+gRPC+%C2%B7+Kafka+%C2%B7+Redis;Exploring+Agentic+AI%2C+RAG+%26+LLMs+%F0%9F%A4%96" alt="Typing SVG" />
 </a>
 
-<br/><br/>
 
 [![Resume](https://img.shields.io/badge/Resume-View-2E9EF7?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/14fGbFIg_VL3VPDn-BzjRJ7vH7MHy4bTS/view?usp=sharing)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rupesh-borse)
@@ -29,17 +28,11 @@ I build secure, scalable backend systems — REST &amp; gRPC services, event-dri
 
 <div align="center">
 
-### 🧰 Tech Stack
-
 <img src="https://skillicons.dev/icons?i=java,spring,python,js,ts,cpp,react,angular,django,flask,fastapi,mysql,postgres,mongodb,redis,docker,azure,nginx,git,githubactions,html,css&theme=dark&perline=11" alt="tech stack" />
 
 </div>
-
-<br/>
-
+</br>
 <div align="center">
-
-### 📈 GitHub Activity
 
 <img src="https://streak-stats.demolab.com?user=rupeshrb&theme=tokyonight&hide_border=true" />
 
@@ -51,15 +44,3 @@ I build secure, scalable backend systems — REST &amp; gRPC services, event-dri
 
 </div>
 
-<br/>
-
-<div align="center">
-
-### 📬 Let's Connect
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rupesh-borse)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rupeshborse45@gmail.com)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/rupeshborse_)
-
-
-</div>
