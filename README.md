@@ -1,8 +1,7 @@
 <div align="center">
 
-
 <a href="#">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=2E9EF7&center=true&vCenter=true&multiline=true&width=750&height=70&lines=Backend+Engineer+%40+Eaton+Corporation;Java+%C2%B7+Spring+Boot+%C2%B7+gRPC+%C2%B7+Kafka+%C2%B7+Redis;Exploring+Agentic+AI%2C+RAG+%26+LLMs+%F0%9F%A4%96" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=2E9EF7&center=true&vCenter=true&multiline=true&width=750&height=110&lines=Backend+Engineer+%40+Eaton+Corporation;Java+%C2%B7+Spring+Boot+%C2%B7+gRPC+%C2%B7+Kafka+%C2%B7+Redis;Exploring+Agentic+AI%2C+RAG+%26+LLMs+%F0%9F%A4%96" alt="Typing SVG" />
 </a>
 
 <br/><br/>
@@ -42,7 +41,6 @@ I build secure, scalable backend systems — REST &amp; gRPC services, event-dri
 
 ### 📈 GitHub Activity
 
-
 <img src="https://streak-stats.demolab.com?user=rupeshrb&theme=tokyonight&hide_border=true" />
 
 <picture>
@@ -63,6 +61,5 @@ I build secure, scalable backend systems — REST &amp; gRPC services, event-dri
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rupeshborse45@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/rupeshborse_)
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1BFFFF,100:2E3192&height=120&section=footer" width="100%"/>
 
 </div>
