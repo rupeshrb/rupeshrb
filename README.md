@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="#">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=2E9EF7&center=true&vCenter=true&multiline=true&width=750&height=110&lines=Backend+Engineer;Java+%C2%B7+Spring+Boot+%C2%B7+gRPC+%C2%B7+Kafka+%C2%B7+Redis;Exploring+Agentic+AI%2C+RAG+%26+LLMs+%F0%9F%A4%96" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=2E9EF7&center=true&vCenter=true&multiline=true&width=750&height=110&lines=Building+Scalable+Backends;Java+%C2%B7+Spring+Boot+%C2%B7+gRPC+%C2%B7+Kafka+%C2%B7+Redis;Exploring+Agentic+AI%2C+RAG+%26+LLMs+%F0%9F%A4%96" alt="Typing SVG" />
 </a>
 
 
