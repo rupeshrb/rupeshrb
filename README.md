@@ -22,8 +22,8 @@
 
 <table>
 <tr>
-<td valign="top"><img src="./RB-ascii.svg" width="370" alt="RB — ASCII portrait" /></td>
-<td valign="top"><img src="./wordmark-rock.svg" width="490" alt="RB — 3D ASCII wordmark" /></td>
+<td valign="top"><img src="./RB-ascii.svg" height="430" alt="RB — ASCII portrait" /></td>
+<td valign="top"><img src="./wordmark-rock.svg" height="430" alt="RB — 3D ASCII wordmark" /></td>
 </tr>
 </table>
 
