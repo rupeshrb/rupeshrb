@@ -107,7 +107,7 @@ def render(data):
   0%   {{ opacity: 0; transform: translateY(-6px); }}
   100% {{ opacity: 1; transform: translateY(0); }}
 }}
-.c {{ opacity: 0; animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
+.c {{ opacity: 1; animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
 """.strip()
 
     if LOOP_ANIM:
