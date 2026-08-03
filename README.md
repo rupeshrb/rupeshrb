@@ -53,6 +53,6 @@ I build secure, scalable backend systems — REST &amp; gRPC services, event-dri
 <div align="center">
 
 <!-- contributor heatmap last -->
-<img src="./contrib-heatmap.svg" width="860" alt="GitHub contribution heatmap" />
+<img src="https://raw.githubusercontent.com/rupeshrb/rupeshrb/feat/animate-heatmap/contrib-heatmap.svg" width="860" alt="GitHub contribution heatmap" />
 
 </div>
