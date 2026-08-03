@@ -1,0 +1,35 @@
+name: Update profile art
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      GH_PROFILE_USER: rupeshrb
+      WORDMARK_TEXT: RB
+      ANIMATE_LOOP: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r scripts/requirements.txt
+      - run: python scripts/prep_photo.py scripts/img_covt_svg.jpg source_prepped.png
+      - run: python scripts/make_ascii_svg.py source_prepped.png RB-ascii.svg
+      - run: python scripts/fetch_contributions.py
+      - run: python scripts/render_heatmap_svg.py
+      - run: python scripts/generate_streak_svg.py
+      - run: python scripts/make_wordmark_svg.py --mode rock --out wordmark-rock.svg
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh profile art [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg streak.svg wordmark-rock.svg RB-ascii.svg source_prepped.png"

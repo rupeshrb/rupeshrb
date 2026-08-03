@@ -20,7 +20,20 @@
 
 <div align="center">
 
-I build secure, scalable backend systems — REST &amp; gRPC services, event-driven pipelines with **Kafka** and **Redis**, and full-stack apps with **Angular** and **React**. At **Eaton Corporation**, I work on enterprise identity migrations and infrastructure modernization. Outside of that, I'm deep in **Agentic AI, RAG, and LLMs** — figuring out how to make systems not just fast and secure, but genuinely intelligent.
+<table>
+<tr>
+<td valign="top"><img src="./RB-ascii.svg" width="370" alt="RB — ASCII portrait" /></td>
+<td valign="top"><img src="./wordmark-rock.svg" width="490" alt="RB — 3D ASCII wordmark" /></td>
+</tr>
+</table>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+I build secure, scalable backend systems — REST &amp; gRPC services, event-driven pipelines with **Kafka** and **Redis**, and full-stack apps with **Angular**, **React**, **SpringBoot**, **FastAPI**. I'm deep in **Agentic AI, RAG, and LLMs** — figuring out how to make systems not just fast and secure, but genuinely intelligent.
 
 </div>
 
@@ -32,13 +45,32 @@ I build secure, scalable backend systems — REST &amp; gRPC services, event-dri
 
 </div>
 </br>
+
 <div align="center">
 
+<table>
+  <tr>
+    <td valign="top"><img src="./streak.svg" width="430" alt="GitHub streak animation" /></td>
+    <td valign="top">
+      <p align="left">
+        This profile is generated from repo-owned SVGs and refreshed daily with GitHub Actions.
+      </p>
+      <p align="left">
+        <a href="https://linkedin.com/in/rupesh-borse">LinkedIn</a><br />
+        <a href="mailto:rupeshborse45@gmail.com">Email</a><br />
+        <a href="https://drive.google.com/file/d/14fGbFIg_VL3VPDn-BzjRJ7vH7MHy4bTS/view?usp=sharing">Resume</a>
+      </p>
+    </td>
+  </tr>
+</table>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake.svg" width="100%"/>
-</picture>
+</div>
+
+<br/>
+
+<div align="center">
+
+<!-- contributor heatmap last -->
+<img src="./contrib-heatmap.svg" width="860" alt="GitHub contribution heatmap" />
 
 </div>
