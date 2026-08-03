@@ -34,7 +34,6 @@ I build secure, scalable backend systems — REST &amp; gRPC services, event-dri
 </br>
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=rupeshrb&theme=tokyonight&hide_border=true" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rupeshrb/rupeshrb/output/github-contribution-grid-snake-dark.svg" />
