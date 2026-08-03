@@ -23,8 +23,6 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r scripts/requirements.txt
-      - run: python scripts/prep_photo.py scripts/img_covt_svg.jpg source_prepped.png
-      - run: python scripts/make_ascii_svg.py source_prepped.png RB-ascii.svg
       - run: python scripts/fetch_contributions.py
       - run: python scripts/render_heatmap_svg.py
       - run: python scripts/generate_streak_svg.py
