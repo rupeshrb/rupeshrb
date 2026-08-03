@@ -10,9 +10,7 @@
 [![Gmail](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rupeshborse45@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/rupeshborse_)
 
-![Profile Views](https://komarev.com/ghpvc/?username=rupeshrb&color=2E9EF7&style=flat-square&label=PROFILE+VIEWS)
-![Location](https://img.shields.io/badge/📍-Pune,%20India-informational?style=flat-square)
-![Status](https://img.shields.io/badge/💼-Eaton%20Corporation-informational?style=flat-square)
+<img src="https://skillicons.dev/icons?i=java,spring,python,js,ts,cpp,react,angular,django,flask,fastapi,mysql,postgres,mongodb,redis,docker,azure,nginx,git,githubactions,html,css&theme=dark&perline=11" alt="tech stack" />
 
 </div>
 
@@ -37,22 +35,20 @@ I build secure, scalable backend systems — REST &amp; gRPC services, event-dri
 
 </div>
 
-<br/>
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=java,spring,python,js,ts,cpp,react,angular,django,flask,fastapi,mysql,postgres,mongodb,redis,docker,azure,nginx,git,githubactions,html,css&theme=dark&perline=11" alt="tech stack" />
-
-</div>
-</br>
-
-
-
-<br/>
+<br>
 
 <div align="center">
 
 <!-- contributor heatmap last -->
 <img src="https://raw.githubusercontent.com/rupeshrb/rupeshrb/feat/animate-heatmap/contrib-heatmap.svg" width="860" alt="GitHub contribution heatmap" />
+
+</div>
+
+</br>
+<div align="center">
+  
+![Profile Views](https://komarev.com/ghpvc/?username=rupeshrb&color=2E9EF7&style=flat-square&label=PROFILE+VIEWS)
+![Location](https://img.shields.io/badge/📍-Pune,%20India-informational?style=flat-square)
+![Status](https://img.shields.io/badge/💼-Eaton%20Corporation-informational?style=flat-square)
 
 </div>
