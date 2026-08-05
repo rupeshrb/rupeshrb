@@ -17,7 +17,7 @@ IN_PATH = os.path.join(HERE, "..", "data", "contributions.json")
 OUT_PATH = os.path.join(HERE, "..", "contrib-heatmap.svg")
 
 # GitHub-ish green ramp: empty -> brightest. Level 5 is a brighter neon top end.
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+PALETTE = ["#161b22", "#161b22", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
 CELL = 12
 GAP = 3
@@ -37,22 +37,22 @@ GREEN = "#39d353"
 GOLD = "#f2cc60"
 
 # reveal timing (one-shot)
-COL_T = 0.035   # per-column delay contribution (left -> right sweep)
-ROW_T = 0.080   # per-row delay contribution (top -> bottom cascade)
-CELL_DUR = 0.70
+COL_T = 0.018   # per-column delay contribution (left -> right sweep)
+ROW_T = 0.045   # per-row delay contribution (top -> bottom cascade)
+CELL_DUR = 0.42
 LOOP_ANIM = os.environ.get("ANIMATE_LOOP", "false").lower() in ("1", "true", "yes")
 
 
 def level_for(count):
     if count == 0:
         return 0
-    if count <= 5:
+    if count <= 2:
         return 1
-    if count <= 15:
+    if count <= 6:
         return 2
-    if count <= 30:
+    if count <= 15:
         return 3
-    if count <= 50:
+    if count <= 30:
         return 4
     return 5
 
@@ -104,10 +104,15 @@ def render(data):
 
     css = f"""
 @keyframes cell {{
-  0%   {{ opacity: 0; transform: translateY(-6px); }}
-  100% {{ opacity: 1; transform: translateY(0); }}
+0% {{ opacity: 0; transform: scale(0.25)
+translateY(-8px); }}
+60% {{ opacity: 1; transform: scale(1.15) translateY(0);
 }}
-.c {{ opacity: 1; animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
+100% {{ opacity: 1; transform: scale(1) translateY(0); }}
+}}
+
+.c {{ opacity: 0; transform-box: fill-box; transform-origin: center;
+animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
 """.strip()
 
     if LOOP_ANIM:
