@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 """
-Render data/contributions.json (produced by fetch_contributions.py) as a proper
-GitHub-style contribution heatmap SVG: a grid of rounded, colored BOXES in the
-classic 53-week x 7-day calendar, revealed once with a diagonal line-after-line
-slide-down (CSS keyframes, plays on load then freezes -- no looping "glow"), a
-Less->More legend, and a real stats footer.
-
-Run by .github/workflows/update-profile-art.yml after fetch_contributions.py.
+Render data/contributions.json as a GitHub-style contribution heatmap SVG.
+Run by .github/workflows/runwork.yml after fetch_contributions.py.
 """
 import datetime
 import json
@@ -16,7 +11,7 @@ HERE = os.path.dirname(__file__)
 IN_PATH = os.path.join(HERE, "..", "data", "contributions.json")
 OUT_PATH = os.path.join(HERE, "..", "contrib-heatmap.svg")
 
-# GitHub-ish green ramp: empty -> brightest. Level 5 is a brighter neon top end.
+# level 1 MUST stay distinct from level 0, or 1-2 contribution days look blank.
 PALETTE = ["#161b22", "#0e6b3a", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
 CELL = 12
@@ -31,14 +26,12 @@ BG = "#0a0e14"
 BG2 = "#0d1420"
 FRAME = "#1f6feb"
 MUTED = "#7d8590"
-TEXT = "#e6edf3"
 ACCENT = "#22d3ee"
 GREEN = "#39d353"
 GOLD = "#f2cc60"
 
-# reveal timing (one-shot)
-COL_T = 0.018   # per-column delay contribution (left -> right sweep)
-ROW_T = 0.045   # per-row delay contribution (top -> bottom cascade)
+COL_T = 0.018
+ROW_T = 0.045
 CELL_DUR = 0.42
 LOOP_ANIM = os.environ.get("ANIMATE_LOOP", "false").lower() in ("1", "true", "yes")
 
@@ -59,7 +52,7 @@ def level_for(count):
 
 def build_grid(days):
     first = datetime.date.fromisoformat(days[0]["date"])
-    lead_pad = (first.weekday() + 1) % 7  # sunday=0
+    lead_pad = (first.weekday() + 1) % 7
     grid = []
     col = [None] * lead_pad
     for d in days:
@@ -76,6 +69,42 @@ def build_grid(days):
             col.append(None)
         grid.append(col)
     return grid
+
+
+def build_css():
+    reveal = f"cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both"
+
+    css = f"""
+@keyframes cell {{
+  0%   {{ opacity: 0; transform: scale(0.25) translateY(-8px); }}
+  60%  {{ opacity: 1; transform: scale(1.12) translateY(0); }}
+  100% {{ opacity: 1; transform: scale(1) translateY(0); }}
+}}
+.c {{
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: {reveal};
+}}
+""".strip()
+
+    if LOOP_ANIM:
+        css += f"""
+
+@keyframes pulse {{
+  0%, 100% {{ filter: brightness(1); }}
+  50%      {{ filter: brightness(1.35); }}
+}}
+.p {{ animation: {reveal}, pulse 2.6s ease-in-out infinite; }}
+"""
+
+    css += """
+
+@media (prefers-reduced-motion: reduce) {
+  .c, .p { opacity: 1 !important; animation: none !important; }
+}
+"""
+    return css.strip()
 
 
 def render(data):
@@ -102,33 +131,10 @@ def render(data):
     stats_h = 88
     canvas_h = TITLEBAR_H + TOP_LABEL_H + art_h + stats_h + PAD
 
-    css = f"""
-@keyframes cell {{
-0% {{ opacity: 0; transform: scale(0.25) translateY(-8px); }}
-60% {{ opacity: 1; transform: scale(1.15) translateY(0); }}
-100% {{ opacity: 1; transform: scale(1) translateY(0); }}
-}}
-
-.c {{ opacity: 0; transform-box: fill-box; transform-origin: center;
-animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
-""".strip()
-
-    if LOOP_ANIM:
-        # subtle infinite pulse for non-empty cells (staggered visually by delay)
-        pulse = """
-@keyframes pulse {
-  0%   { transform: scale(1); filter: brightness(1); }
-  50%  { transform: scale(1.03); filter: brightness(1.12); }
- 100%  { transform: scale(1); filter: brightness(1); }
-}
-.p { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
-"""
-        css = css + "\n" + pulse
-
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{canvas_w}" height="{canvas_h}" '
         f'viewBox="0 0 {canvas_w} {canvas_h}" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">',
-        f'<style>{css}</style>',
+        f'<style>{build_css()}</style>',
         '<defs>'
         f'<linearGradient id="hbg" x1="0" y1="0" x2="0" y2="1">'
         f'<stop offset="0" stop-color="{BG2}"/><stop offset="1" stop-color="{BG}"/></linearGradient>'
@@ -154,7 +160,6 @@ animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
         y = grid_top + wi * STEP + CELL * 0.78
         parts.append(f'<text x="{PAD}" y="{y:.1f}" fill="{MUTED}" font-size="9">{wname}</text>')
 
-    # the boxes -- each a rounded rect, diagonal slide-down reveal (once, freeze)
     for ci, column in enumerate(grid):
         gx = grid_left + ci * STEP
         for ri, cell in enumerate(column):
@@ -164,16 +169,13 @@ animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
             gy = grid_top + ri * STEP
             delay = ci * COL_T + ri * ROW_T
             plural = "s" if count != 1 else ""
-            cls = "c"
-            if LOOP_ANIM and lvl > 0:
-                cls = "c p"
+            cls = "c p" if (LOOP_ANIM and lvl > 0) else "c"
             parts.append(
                 f'<rect class="{cls}" x="{gx}" y="{gy}" width="{CELL}" height="{CELL}" rx="2.5" '
                 f'fill="{PALETTE[lvl]}" style="animation-delay:{delay:.3f}s">'
                 f'<title>{date_s}: {count} contribution{plural}</title></rect>'
             )
 
-    # legend: Less [][][][][] More (bottom-right of the grid)
     leg_y = grid_top + art_h + 6
     leg_x = canvas_w - PAD - (len(PALETTE) * (CELL - 1) + 70)
     parts.append(f'<text x="{leg_x}" y="{leg_y + CELL*0.8:.1f}" fill="{MUTED}" font-size="10" text-anchor="end">Less</text>')
@@ -193,7 +195,6 @@ animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
     rng = data["range"]
 
     ly = sep_y + 24
-    # left column: big highlighted numbers; right column: context in muted
     parts.append(f'<text x="{PAD}" y="{ly}" font-size="13" fill="{GREEN}">'
                  f'<tspan font-weight="700">{total:,}</tspan>'
                  f'<tspan fill="{MUTED}"> contributions in the last year</tspan></text>')
