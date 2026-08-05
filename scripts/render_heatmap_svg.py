@@ -17,7 +17,7 @@ IN_PATH = os.path.join(HERE, "..", "data", "contributions.json")
 OUT_PATH = os.path.join(HERE, "..", "contrib-heatmap.svg")
 
 # GitHub-ish green ramp: empty -> brightest. Level 5 is a brighter neon top end.
-PALETTE = ["#161b22", "#161b22", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+PALETTE = ["#161b22", "#0e6b3a", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
 CELL = 12
 GAP = 3
@@ -104,10 +104,8 @@ def render(data):
 
     css = f"""
 @keyframes cell {{
-0% {{ opacity: 0; transform: scale(0.25)
-translateY(-8px); }}
-60% {{ opacity: 1; transform: scale(1.15) translateY(0);
-}}
+0% {{ opacity: 0; transform: scale(0.25) translateY(-8px); }}
+60% {{ opacity: 1; transform: scale(1.15) translateY(0); }}
 100% {{ opacity: 1; transform: scale(1) translateY(0); }}
 }}
 
@@ -123,7 +121,7 @@ animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
   50%  { transform: scale(1.03); filter: brightness(1.12); }
  100%  { transform: scale(1); filter: brightness(1); }
 }
-.p { transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+.p { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
 """
         css = css + "\n" + pulse
 
