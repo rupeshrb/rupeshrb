@@ -1,22 +1,22 @@
 {
   "username": "rupeshrb",
-  "generated_at": "2026-08-28T18:44:38Z",
+  "generated_at": "2026-08-29T12:42:20Z",
   "range": {
     "start": "2025-08-24",
+    "end": "2026-08-29"
+  },
+  "total_contributions": 144,
+  "active_days": 34,
+  "avg_per_active_day": 4.2,
+  "current_streak": {
+    "length": 26,
+    "start": "2026-08-03",
     "end": "2026-08-28"
   },
-  "total_contributions": 143,
-  "active_days": 33,
-  "avg_per_active_day": 4.3,
-  "current_streak": {
-    "length": 25,
-    "start": "2026-08-03",
-    "end": "2026-08-27"
-  },
   "longest_streak": {
-    "length": 25,
+    "length": 26,
     "start": "2026-08-03",
-    "end": "2026-08-27"
+    "end": "2026-08-28"
   },
   "best_day": {
     "date": "2026-08-03",
@@ -73,7 +73,7 @@
     },
     {
       "month": "2026-08",
-      "total": 101
+      "total": 102
     }
   ],
   "days": [
@@ -1555,6 +1555,10 @@
     },
     {
       "date": "2026-08-28",
+      "count": 1
+    },
+    {
+      "date": "2026-08-29",
       "count": 0
     }
   ]
