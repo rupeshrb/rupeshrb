@@ -1,32 +1,28 @@
 {
   "username": "rupeshrb",
-  "generated_at": "2026-09-05T10:37:58Z",
+  "generated_at": "2026-09-06T11:00:01Z",
   "range": {
-    "start": "2025-08-31",
+    "start": "2025-09-07",
+    "end": "2026-09-06"
+  },
+  "total_contributions": 152,
+  "active_days": 42,
+  "avg_per_active_day": 3.6,
+  "current_streak": {
+    "length": 34,
+    "start": "2026-08-03",
     "end": "2026-09-05"
   },
-  "total_contributions": 151,
-  "active_days": 41,
-  "avg_per_active_day": 3.7,
-  "current_streak": {
-    "length": 33,
-    "start": "2026-08-03",
-    "end": "2026-09-04"
-  },
   "longest_streak": {
-    "length": 33,
+    "length": 34,
     "start": "2026-08-03",
-    "end": "2026-09-04"
+    "end": "2026-09-05"
   },
   "best_day": {
     "date": "2026-08-03",
     "count": 33
   },
   "monthly": [
-    {
-      "month": "2025-08",
-      "total": 0
-    },
     {
       "month": "2025-09",
       "total": 4
@@ -77,38 +73,10 @@
     },
     {
       "month": "2026-09",
-      "total": 4
+      "total": 5
     }
   ],
   "days": [
-    {
-      "date": "2025-08-31",
-      "count": 0
-    },
-    {
-      "date": "2025-09-01",
-      "count": 0
-    },
-    {
-      "date": "2025-09-02",
-      "count": 0
-    },
-    {
-      "date": "2025-09-03",
-      "count": 0
-    },
-    {
-      "date": "2025-09-04",
-      "count": 0
-    },
-    {
-      "date": "2025-09-05",
-      "count": 0
-    },
-    {
-      "date": "2025-09-06",
-      "count": 0
-    },
     {
       "date": "2025-09-07",
       "count": 0
@@ -1563,6 +1531,10 @@
     },
     {
       "date": "2026-09-05",
+      "count": 1
+    },
+    {
+      "date": "2026-09-06",
       "count": 0
     }
   ]
